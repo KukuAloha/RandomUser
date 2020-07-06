@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 public class Location {
     @SerializedName("street")
     @Expose
-    private String street;
+    private Location street; // что-то странно и крашится если String
     @SerializedName("city")
     @Expose
     private String city;
@@ -23,11 +23,11 @@ public class Location {
     @Expose
     private Timezone timezone;
 
-    public String getStreet() {
+    public Location getStreet() {
         return street;
     }
 
-    public void setStreet(String street) {
+    public void setStreet(Location street) {
         this.street = street;
     }
 

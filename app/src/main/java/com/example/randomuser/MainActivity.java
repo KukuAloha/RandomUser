@@ -9,7 +9,15 @@ import android.widget.Toast;
 
 import com.example.randomuser.data.Result;
 import com.example.randomuser.data.User;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.reflect.TypeToken;
 
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
+                t.printStackTrace();
                 Toast.makeText(MainActivity.this,"Failed",Toast.LENGTH_SHORT).show();
             }
 

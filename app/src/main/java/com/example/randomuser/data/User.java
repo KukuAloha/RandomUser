@@ -8,7 +8,7 @@ import java.util.List;
 public class User {
     @SerializedName("results")
     @Expose
-    public List<Result> results ;//= null;
+    public List<Result> results = null;
     @SerializedName("info")
     @Expose
     public Info info;

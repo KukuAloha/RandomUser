@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RandomUser</string>
+    <string name="second_activity">Second Activity</string>
+    <string name="name">Name</string>
 </resources>

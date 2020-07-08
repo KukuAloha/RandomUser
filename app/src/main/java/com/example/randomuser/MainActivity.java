@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void generateResultData(List<Result> results) {
         recyclerView = findViewById(R.id.random_user_rv);
-        resultAdapter = new ResultAdapter(results);
+        resultAdapter = new ResultAdapter(results, this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this
                 /*LinearLayoutManager.VERTICAL,false*/);
         recyclerView.setLayoutManager(layoutManager);

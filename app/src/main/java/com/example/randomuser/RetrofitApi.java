@@ -1,6 +1,5 @@
 package com.example.randomuser;
 
-import com.example.randomuser.data.Result;
 import com.example.randomuser.data.User;
 
 import java.util.List;

@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -40,7 +39,8 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ResultView
 
     @Override
     public void onBindViewHolder(@NonNull ResultViewHolder holder, int position) {
-        holder.text.setText(results.get(position).getName().getFirst());
+        holder.textFirstName.setText(results.get(position).getName().getFirst());
+        holder.textSecondName.setText(results.get(position).getName().getLast());
 
         Picasso.Builder builder = new Picasso.Builder(context);
         builder.downloader(new OkHttp3Downloader(context));
@@ -66,12 +66,13 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ResultView
 
     public class ResultViewHolder extends RecyclerView.ViewHolder{
 
-        TextView text;
+        TextView textFirstName, textSecondName;
         ImageView imageView;
 
         ResultViewHolder(@NonNull View itemView) {
             super(itemView);
-            text = itemView.findViewById(R.id.text_gender);
+            textFirstName = itemView.findViewById(R.id.textFirstName);
+            textSecondName = itemView.findViewById(R.id.textSecondName);
             imageView = itemView.findViewById(R.id.imageUser);
         }
     }

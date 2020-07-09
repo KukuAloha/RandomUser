@@ -1,15 +1,5 @@
 package com.example.randomuser;
 
-import android.util.Log;
-import android.widget.Toast;
-
-import com.example.randomuser.data.User;
-
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
